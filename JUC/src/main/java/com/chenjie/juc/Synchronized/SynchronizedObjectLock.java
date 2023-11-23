@@ -1,4 +1,4 @@
-package Synchronized;
+package com.chenjie.juc.Synchronized;
 
 public class SynchronizedObjectLock implements Runnable {
     static SynchronizedObjectLock instence1 = new SynchronizedObjectLock();

@@ -1,4 +1,4 @@
-package Thread;
+package com.chenjie.juc.Thread;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;

@@ -1,4 +1,4 @@
-package CAS;
+package com.chenjie.juc.CAS;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
