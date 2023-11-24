@@ -11,4 +11,5 @@ public class JUCApplication {
         TimeZone.setDefault(TimeZone.getTimeZone("Asia/Shanghai"));
         SpringApplication.run(JUCApplication.class,args);
     }
+
 }

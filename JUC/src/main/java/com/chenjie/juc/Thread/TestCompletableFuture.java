@@ -68,9 +68,7 @@ public class TestCompletableFuture {
      */
     @Test
     public void testCompletableFuture_runAsync() {
-        CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
-            System.out.println("compute test");
-        });
+        CompletableFuture<Void> future = CompletableFuture.runAsync(() -> System.out.println("compute test"));
 
         /*
          * 由于任务没有返回值， 所以最后的打印结果是get result: null
@@ -571,7 +569,7 @@ public class TestCompletableFuture {
         });
         //allof等待所有任务执行完成才执行job4，如果有一个任务异常终止，则job4.get时会抛出异常，都是正常执行，job4.get返回null
         //anyOf是只有一个任务执行完成，无论是正常执行或者执行异常，都会执行job4，job4.get的结果就是已执行完成的任务的执行结果
-        CompletableFuture job4 = CompletableFuture.allOf(job, job2, job3).whenComplete((a, b) -> {
+        CompletableFuture<Void> job4 = CompletableFuture.allOf(job, job2, job3).whenComplete((a, b) -> {
             if (b != null) {
                 System.out.println("error stack trace->");
                 b.printStackTrace();

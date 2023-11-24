@@ -1,12 +1,13 @@
 package com.chenjie.juc.Synchronized;
 
-public class SynchronizedObjectLock implements Runnable {
-    static SynchronizedObjectLock instence = new SynchronizedObjectLock();
+public class SynchronizedObjectLock7 implements Runnable {
+    static SynchronizedObjectLock7 instence1 = new SynchronizedObjectLock7();
+    static SynchronizedObjectLock7 instence2 = new SynchronizedObjectLock7();
 
     @Override
     public void run() {
-        // 同步代码块形式——锁为this,两个线程使用的锁是一样的,线程1必须要等到线程0释放了该锁后，才能执行
-        synchronized (this) {
+        // 所有线程需要的锁都是同一把
+        synchronized (SynchronizedObjectLock7.class) {
             System.out.println("我是线程" + Thread.currentThread().getName());
             try {
                 Thread.sleep(3000);
@@ -18,10 +19,9 @@ public class SynchronizedObjectLock implements Runnable {
     }
 
     public static void main(String[] args) {
-        Thread t1 = new Thread(instence);
-        Thread t2 = new Thread(instence);
+        Thread t1 = new Thread(instence1);
+        Thread t2 = new Thread(instence2);
         t1.start();
         t2.start();
     }
 }
-

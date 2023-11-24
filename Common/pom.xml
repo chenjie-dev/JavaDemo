@@ -7,7 +7,7 @@
 
     <parent>
         <groupId>com.chenjie</groupId>
-        <artifactId>Java_Base</artifactId>
+        <artifactId>JavaDemo</artifactId>
         <version>0.0.1</version>
     </parent>
 
