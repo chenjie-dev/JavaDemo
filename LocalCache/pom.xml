@@ -10,7 +10,8 @@
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>CollectionAndMap</artifactId>
+    <groupId>org.chenjie</groupId>
+    <artifactId>LocalCache</artifactId>
     <version>0.0.1</version>
 
     <properties>

@@ -10,7 +10,7 @@
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>CollectionAndMap</artifactId>
+    <artifactId>DesignPattern</artifactId>
     <version>0.0.1</version>
 
     <properties>

@@ -10,10 +10,12 @@
 	<modules>
 		<module>Common</module>
 		<module>CollectionAndMap</module>
-		<module>Java8</module>
+		<module>JavaBase-8</module>
 		<module>JavaBase</module>
 		<module>JUC</module>
 		<module>JVM</module>
+        <module>LocalCache</module>
+		<module>DesignPattern</module>
 	</modules>
 
 	<properties>
@@ -29,6 +31,7 @@
 		<install.version>0.0.1</install.version>
 		<mdep.outputFile>${project.build.directory}/classpath.info</mdep.outputFile>
 		<autoconfigure.version>2.5.15</autoconfigure.version>
+		<caffeine.version>3.1.5</caffeine.version>
 	</properties>
 
 	<dependencyManagement>
@@ -54,6 +57,11 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-autoconfigure</artifactId>
 				<version>${autoconfigure.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.github.ben-manes.caffeine</groupId>
+				<artifactId>caffeine</artifactId>
+				<version>${caffeine.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
