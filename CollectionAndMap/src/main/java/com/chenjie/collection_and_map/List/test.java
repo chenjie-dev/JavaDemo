@@ -1,4 +1,4 @@
-package List;
+package com.chenjie.collection_and_map.List;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ public class test {
 
     public static void main(String[] args) {
 
-        List<String> list = new ArrayList<String>();
+        List<String> list = new ArrayList<>();
 
         for(int i = 0; i < 10; i++) {
             list.add(Integer.toString(i));
